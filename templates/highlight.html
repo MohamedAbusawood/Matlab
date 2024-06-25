@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/style.css">
+  <title>Highlights of Extraction</title>
+  <link rel="icon" href="../static/logo1.png">
+</head>
+<body>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="/">Home</a>
+    <a href="/extractpg">Keyword Extraction</a>
+    <a href="/services">Services</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>  
+    <button onclick="goBack()">Back</button>
+  </div>
+    
+  <style>
+    /* Move button styles to external CSS file for better maintainability */
+    button.back {
+      background-color: rgba(207, 224, 230, 0.733);
+      font-family: Georgia, serif;
+      color: #6014da;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    button.back:hover {
+      background-color: rgba(207, 224, 230, 0.9);
+    }
+  </style>
+  
+  <center>
+    <div class="f"><h1 class="keyword">
+      <div class="ig"> <img src="../static/logo1.png" alt="logo" width="80" height="80" style="clip-path: circle();"></div>
+       Keyword<span class="extraction">Extraction</span>
+   </h1></div>
+<h2>"It is useful for your studies"</h2>
+ <br><br>
+    <!-- Input Wrapper -->
+    <div class="container">
+      <div class="card input-wrapper">
+        <div class="text-area">
+          {% if error %}
+          <p style="color:red">{{ error }}</p>
+          {% endif %}
+          {% if text %}
+          <!-- Display extracted text -->
+          <div class="output-wrapper">
+            <p>Highlighted Text:</p>
+            <br>
+            {{ text|safe }}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <!-- Output Wrapper -->
+    <div class="container">
+      <div class="card output-wrapper">
+        <ul>
+          <p>Top Extraction Keywords:</p>
+          <br>
+          {% for kw in keywords %}
+            <br>Keyword: {{ kw.keyword }}<br> Score: {{ kw.score }}<br>
+          {% endfor %}
+        </ul>
+        <br>
+        <button onclick="downloadKeywords()">Download Keywords</button>
+      </div>
+    </div>
+    
+    <!-- Display plot if available -->
+    <img src="{{ plot_path }}" alt="">
+  </center>
+  
+  <!-- Move JavaScript to the bottom of the body for better page loading performance -->
+  <script src="/static/script.js"></script>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

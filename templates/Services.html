@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/style.css">
+  <title>Menu/Services</title>
+  <link rel="icon" href="../static/logo1.png">
+  <style>
+    /* Move button styles to external CSS file for better maintainability */
+    button.back {
+      background-color: rgba(207, 224, 230, 0.733);
+      font-family: Georgia, serif;
+      color: #6014da;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    button.back:hover {
+      background-color: rgba(207, 224, 230, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="/">Home</a>
+    <a href="/extractpg">Keyword Extraction</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>  
+    <button onclick="goBack()">Back</button>
+  </div>
+  
+  <center>
+    <div class="f"><h1 class="keyword">
+      <div class="ig"> <img src="../static/logo1.png" alt="logo" width="80" height="80" style="clip-path: circle();"></div>
+       Keyword<span class="extraction">Extraction</span>
+   </h1></div>
+<h2>"It is useful for your studies"</h2>
+ <br><br>
+    <div class="container">
+      <div class="card output-wrapper">
+        <p>Terms & Services:</p>
+        <br>
+        <b>
+          &quot;These terms and conditions outline the rules and regulations for the use of Our Website, located at example.com.
+          By accessing this website, we assume you accept these terms and conditions. Do not continue to use Our Website if you do not agree to take all of the terms and conditions stated on this page.&quot;
+          <br><br>
+          &quot;Privacy Policy:
+          At Our Website, accessible from example.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Our Website and how we use it.&quot;
+        </b>
+      </div>
+    </div>
+  </center>
+  
+  <!-- Move JavaScript to the bottom of the body for better page loading performance -->
+  <script src="/static/script.js"></script>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

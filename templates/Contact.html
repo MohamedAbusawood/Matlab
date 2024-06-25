@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/style.css">
+  <title>Menu/Contact</title>
+  <link rel="icon" href="../static/logo1.png">
+  <style>
+    button.back {
+      background-color: rgba(207, 224, 230, 0.733);
+      font-family: Georgia, serif;
+      color: #6014da;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    button.back:hover {
+      background-color: rgba(207, 224, 230, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="/">Home</a>
+    <a href="/extractpg">Keyword Extraction</a>
+    <a href="/services">Services</a>
+    <a href="/about">About</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>  
+    <button onclick="goBack()">Back</button>
+  </div>
+    
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+  
+  <center>
+    <div class="f"><h1 class="keyword">
+      <div class="ig"> <img src="../static/logo1.png" alt="logo" width="80" height="80" style="clip-path: circle();"></div>
+       Keyword<span class="extraction">Extraction</span>
+   </h1></div>
+<h2>"It is useful for your studies"</h2>
+ <br><br>
+  <div class="container">
+    <div class="card output-wrapper">
+      <p>Contact:</p><br>
+      <b>1.Melvin s (Backend Developer)  -9867456721</b><br>
+      <b>2.Muthurasa r (Backend Developer) -9234567888</b><br>
+      <b>3.Mohamed Abusawood (Frontend Developer)-9750657815</b>
+    </div>
+  </div>
+  </center>
+  <script src="/static/script.js"></script>
+</body>
+</html>
